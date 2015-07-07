@@ -1,0 +1,3 @@
+syslog-frequent-error <cat syslog | awk -F'[()]' '{if(!seen[$4]++){ seen1[$4]=$0;;++i}}END {for (j in seen){ print seen[j], seen1[j]}}' | sort -nr>
+execute-node-program-forever <node server.js & >custom.log>
+run-coomand-to-server <ssh -i user@ip commands>
